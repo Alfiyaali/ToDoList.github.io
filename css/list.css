@@ -28,6 +28,7 @@ header h1{
 
 #new-task{
     display: flex;
+    flex-direction: column;
 }
 
 input, button{
@@ -38,7 +39,7 @@ input, button{
 }
 
 #new-task-input{
-    flex: 1 1 0%;
+    flex: 1 0 0;
     background-color: whitesmoke;
     padding: 1rem;
     border-radius: 1rem;
@@ -55,7 +56,7 @@ input, button{
     font-weight: 700;
     cursor: pointer;
     transition: 0.4s;
-    margin-left: 2rem;
+    margin-left: 1rem;
     padding: 20px;
     border-radius: 30px;
     background-image: linear-gradient(to right top, #9ed8f3, #a5d5fb, #b2d1ff, #c4cbff, #d7c5fc, #e0c3f8, #e8c0f3, #f0beee, #f0bfed, #efbfec, #efc0ec, #eec0eb);
@@ -89,6 +90,7 @@ main{
     color: black;
     margin-bottom: 1rem;
 }
+
 
 #tasks .task{
     display: flex;
@@ -140,4 +142,10 @@ main{
 
 .task .actions .delete{
     background-image: linear-gradient(to right top, #da99e5, #dfa0e7, #e3a6e8, #e7adea, #ebb4ec, #dbbff7, #ccc8fe, #c1d1ff, #a7ddff, #9de6f5, #a7ece2, #c0eecf);
+}
+
+@media only screen and (min-width: 500px)  {
+    #new-task{
+        flex-direction: row;
+    }
 }
